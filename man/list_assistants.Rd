@@ -15,6 +15,9 @@ list_assistants(order = "desc", limit = 20)
 
 \item{limit}{The maximum number of assistants to return.}
 }
+\value{
+A list of assistant objects
+}
 \description{
 Get list of all assistants
 curl "https://api.openai.com/v1/assistants?order=desc&limit=20" \

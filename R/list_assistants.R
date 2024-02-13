@@ -5,7 +5,7 @@
 #' -H "OpenAI-Beta: assistants=v1"
 #' @param order The order to list the assistants in. Options are "asc" and "desc".
 #' @param limit The maximum number of assistants to return.
-#' @retuerns A list of assistant objects
+#' @returns A list of assistant objects
 #' @export
 #' @examples
 #' list_assistants()

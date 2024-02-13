@@ -2,3 +2,4 @@
 
 export(check_token)
 export(list_assistants)
+export(retrieveAssistant)
