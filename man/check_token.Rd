@@ -9,3 +9,6 @@ check_token()
 \description{
 Check whether the OpenAI Token is set
 }
+\examples{
+check_token()
+}

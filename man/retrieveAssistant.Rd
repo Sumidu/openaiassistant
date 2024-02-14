@@ -27,5 +27,7 @@ curl https://api.openai.com/v1/assistants/asst_abc123 \
 -H "OpenAI-Beta: assistants=v1"
 }
 \examples{
+\dontrun{
 retrieveAssistant("asst_abc123")
+}
 }

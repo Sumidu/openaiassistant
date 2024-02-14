@@ -15,8 +15,9 @@
 #' @param assistant_id The ID of the assistant to retrieve.
 #' @returns An assistant object
 #' @export
-#' @examples
+#' @examples \dontrun{
 #' retrieveAssistant("asst_abc123")
+#' }
 retrieveAssistant <- function(assistant_id){
   check_token()
   base_url <- "https://api.openai.com/"

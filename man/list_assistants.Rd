@@ -26,5 +26,7 @@ curl "https://api.openai.com/v1/assistants?order=desc&limit=20" \
 -H "OpenAI-Beta: assistants=v1"
 }
 \examples{
+\dontrun{
 list_assistants()
+}
 }
