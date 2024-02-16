@@ -1,4 +1,5 @@
 #' Check whether the OpenAI Token is set
+#' @returns NULL
 #' @export
 #' @examples
 #' check_token()
