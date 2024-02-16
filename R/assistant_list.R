@@ -1,16 +1,12 @@
 #' Get list of all assistants
-#' curl "https://api.openai.com/v1/assistants?order=desc&limit=20" \
-#' -H "Content-Type: application/json" \
-#' -H "Authorization: Bearer $OPENAI_API_KEY" \
-#' -H "OpenAI-Beta: assistants=v1"
 #' @param order The order to list the assistants in. Options are "asc" and "desc".
 #' @param limit The maximum number of assistants to return.
 #' @returns A list of assistant objects
 #' @export
 #' @examples \dontrun{
-#' list_assistants()
+#' assistant_list()
 #' }
-list_assistants <- function(order = "desc", limit = 20) {
+assistant_list <- function(order = "desc", limit = 20) {
   check_token()
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)

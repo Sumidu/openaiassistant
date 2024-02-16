@@ -2,9 +2,9 @@
 #' This will only add the file if it not exists
 #' @param assistant The assistant to add the file to
 #' @param file_id The file id to add to the assistant
-#' @returns The assistant object
+#' @returns The updated assistant object
 #' @export
-add_file_to_assistant <- function(assistant, file_id){
+assistant_add_file <- function(assistant, file_id){
 
   check_token()
   if (file_id %in% assistant$file_ids){

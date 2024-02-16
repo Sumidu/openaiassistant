@@ -1,9 +1,7 @@
 #' List all files
-#' curl https://api.openai.com/v1/files \
-#' -H "Authorization: Bearer $OPENAI_API_KEY"
 #' @returns A list of file objects
 #' @export
-list_files <- function(){
+files_list <- function(){
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)
   resp <- req |>

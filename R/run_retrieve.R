@@ -1,12 +1,13 @@
 #' Retrieve a run by thread and run object
-#' curl https://api.openai.com/v1/threads/thread_abc123/runs/run_abc123 \
-#' -H "Authorization: Bearer $OPENAI_API_KEY" \
-#' -H "OpenAI-Beta: assistants=v1"
-#' @param thread The thread object to retrieve the run from
 #' @param run The run object to retrieve
+#' @param thread The thread object to retrieve the run from
 #' @returns The updated run object
 #' @export
-retrieve_run <- function(thread, run){
+#' @examples \dontrun{
+#' # more details here TBD
+#' run_retrieve(run, thread)
+#' }
+run_retrieve <- function(run, thread){
   check_token()
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)

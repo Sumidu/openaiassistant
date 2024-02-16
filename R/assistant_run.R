@@ -1,24 +1,17 @@
-#' function that runs an assistant with a thread
-#' curl https://api.openai.com/v1/threads/thread_abc123/runs \
-#' -H "Authorization: Bearer $OPENAI_API_KEY" \
-#' -H "Content-Type: application/json" \
-#' -H "OpenAI-Beta: assistants=v1" \
-#' -d '{
-#'    "assistant_id": "asst_abc123"
-#'  }'
-#' @param thread The thread to run the assistant with
+#' Function that runs an assistant with a thread
 #' @param assistant The assistant to run
+#' @param thread The thread to run the assistant with
 #' @returns A run object
 #' @export
 #' @examples \dontrun{
-#' thread <- create_thread()
 #' assistant <- create_assistant()
-#' run <- run_assistant(thread, assistant)
+#' thread <- create_thread()
+#' run <- run_assistant(assistant, thread)
 #' if(run$status != "completed"){
 #'  print("The assistant is still running")
 #' }
 #' }
-run_assistant <- function(thread, assistant){
+assistant_run <- function(assistant, thread){
   check_token()
   body <- list(assistant_id = assistant$id)
   base_url <- "https://api.openai.com/"

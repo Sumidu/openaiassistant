@@ -15,3 +15,8 @@ The content of the last message
 \description{
 Gets the content of the last message from a list of messages
 }
+\examples{
+\dontrun{
+get_last_message(messages)
+}
+}

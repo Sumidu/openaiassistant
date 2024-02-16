@@ -2,7 +2,11 @@
 #' @param file_path The path to the file to upload
 #' @returns A file object
 #' @export
-upload_file <- function(file_path){
+#' @examples \dontrun{
+#' file_upload("path/to/file")
+#' }
+file_upload <- function(file_path){
+  check_token()
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)
   resp <- req |>

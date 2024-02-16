@@ -1,24 +1,11 @@
-#' Retrieve assistant using the API
-#' GET
-#' https://api.openai.com/v1/assistants/{assistant_id}
-#' Retrieves an assistant.
-#' Path parameters
-#' assistant_id
-#' string
-#' Required
-#' The ID of the assistant to retrieve.
-#'
-#' curl https://api.openai.com/v1/assistants/asst_abc123 \
-#' -H "Content-Type: application/json" \
-#' -H "Authorization: Bearer $OPENAI_API_KEY" \
-#' -H "OpenAI-Beta: assistants=v1"
+#' Retrieves an assistant by id
 #' @param assistant_id The ID of the assistant to retrieve.
 #' @returns An assistant object
 #' @export
 #' @examples \dontrun{
 #' retrieveAssistant("asst_abc123")
 #' }
-retrieveAssistant <- function(assistant_id){
+assistant_retrieve <- function(assistant_id){
   check_token()
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)

@@ -1,21 +1,15 @@
 #' Add a message to a thread
-#' curl https://api.openai.com/v1/threads/thread_abc123/messages \
-#' -H "Content-Type: application/json" \
-#' -H "Authorization: Bearer $OPENAI_API_KEY" \
-#' -H "OpenAI-Beta: assistants=v1" \
-#' -d '{
-#'      "role": "user",
-#'     "content": "How does AI work? Explain it in simple terms."
-#'    }'
+#'
 #' @param thread A thread object
-#' @param message The message to add
+#' @param message The text of the message to add as a string
 #' @returns A message object
 #' @export
 #' @examples \dontrun{
 #' thread <- create_thread()
-#' msg <- addMessage(thread, "How does AI work? Explain it in simple terms.")
+#' msg <- thread_add_message(thread, "How does AI work? Explain it in simple terms.")
 #' }
-add_message <- function(thread, message){
+thread_add_message <- function(thread, message){
+  check_token()
   body <- list(role = "user", content = message)
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)

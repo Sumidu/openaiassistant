@@ -1,11 +1,11 @@
 #' Delete a file by id
-#' curl https://api.openai.com/v1/files/file-abc123 \
-#' -X DELETE \
-#' -H "Authorization: Bearer $OPENAI_API_KEY"
 #' @param file_id The file id to delete
-#' @returns A list of file objects?
+#' @returns A response object with a field deleted set to TRUE if the file was deleted
 #' @export
-deleteFile <- function(file_id){
+#' @examples \dontrun{
+#' file_delete("file_abc123")
+#' }
+file_delete <- function(file_id){
   check_token()
   body <- list(file_id = file_id)
   base_url <- "https://api.openai.com/"
