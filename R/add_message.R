@@ -15,7 +15,7 @@
 #' thread <- create_thread()
 #' msg <- addMessage(thread, "How does AI work? Explain it in simple terms.")
 #' }
-addMessage <- function(thread, message){
+add_message <- function(thread, message){
   body <- list(role = "user", content = message)
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)
