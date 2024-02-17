@@ -6,6 +6,10 @@
 #' file_delete("file_abc123")
 #' }
 file_delete <- function(file_id){
+
+  assertthat::assert_that(is.character(file_id))
+  assertthat::assert_that(is_file_id(file_id))
+
   check_token()
   body <- list(file_id = file_id)
   base_url <- "https://api.openai.com/"

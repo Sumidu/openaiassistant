@@ -6,6 +6,10 @@
 #' thread_delete("thread_abc123")
 #' }
 thread_delete <- function(thread_id){
+
+  assertthat::assert_that(is.character(thread_id))
+  assertthat::assert_that(is_thread_id(thread_id))
+
   check_token()
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)

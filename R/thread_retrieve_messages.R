@@ -7,6 +7,10 @@
 #' messages <- thread_retrieve_messages(thread)
 #' }
 thread_retrieve_messages <- function(thread){
+
+  assertthat::assert_that(is_thread(thread))
+  check_token()
+
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)
   resp <- req |>

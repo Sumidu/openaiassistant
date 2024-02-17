@@ -7,6 +7,14 @@
 #' assistant_file_delete(assistant, file_id)
 #' }
 assistant_file_delete <- function(assistant, file_id){
+
+  assertthat::assert_that(is_assistant(assistant))
+  assertthat::assert_that(is.character(file_id))
+  assertthat::assert_that(is_file_id(file_id))
+
+  check_token()
+
+
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)
   resp <- req |>

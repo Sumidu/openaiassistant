@@ -2,6 +2,9 @@
 #' @returns A list of file objects
 #' @export
 files_list <- function(){
+
+  check_token()
+
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)
   resp <- req |>

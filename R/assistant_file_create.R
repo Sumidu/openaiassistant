@@ -5,7 +5,13 @@
 #' @returns An assistant_file object
 #' @export
 assistant_file_create <- function(assistant, file_id){
+
+  assertthat::assert_that(is_assistant(assistant))
+  assertthat::assert_that(is.character(file_id))
+  assertthat::assert_that(is_file_id(file_id))
+
   check_token()
+
   body <- list(file_id = file_id)
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)

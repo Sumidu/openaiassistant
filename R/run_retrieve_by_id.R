@@ -7,7 +7,15 @@
 #' run_retrieve_by_id("run_abc123", "thread_abc123")
 #' }
 run_retrieve_by_id <- function(run_id, thread_id){
+
+  assertthat::assert_that(is.character(run_id))
+  assertthat::assert_that(is_run_id(run_id))
+
+  assertthat::assert_that(is.character(thread_id))
+  assertthat::assert_that(is_thread_id(thread_id))
+
   check_token()
+
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)
   resp <- req |>

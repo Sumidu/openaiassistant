@@ -5,7 +5,9 @@
 #' thread <- thread_create()
 #' }
 thread_create <- function() {
+
   check_token()
+
   body <- ""
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)

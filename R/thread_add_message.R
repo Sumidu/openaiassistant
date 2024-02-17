@@ -9,7 +9,12 @@
 #' msg <- thread_add_message(thread, "How does AI work? Explain it in simple terms.")
 #' }
 thread_add_message <- function(thread, message){
+
+  assertthat::assert_that(is_thread(thread))
+  assertthat::assert_that(is.character(message))
+
   check_token()
+
   body <- list(role = "user", content = message)
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)

@@ -6,7 +6,11 @@
 #' file_upload("path/to/file")
 #' }
 file_upload <- function(file_path){
+
+  assertthat::assert_that(file.exists(file_path))
+
   check_token()
+
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)
   resp <- req |>

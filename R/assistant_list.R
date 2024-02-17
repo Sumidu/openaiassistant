@@ -7,7 +7,11 @@
 #' assistant_list()
 #' }
 assistant_list <- function(order = "desc", limit = 20) {
+
+  assertthat::assert_that(order %in% c("asc", "desc"), msg = "order must bei either 'asc' or 'desc'.")
+
   check_token()
+
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)
   resp <- req |>

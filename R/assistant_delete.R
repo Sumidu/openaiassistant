@@ -6,6 +6,10 @@
 #' assistant_delete("asst_abc123")
 #' }
 assistant_delete <- function(assistant_id){
+
+  assertthat::assert_that(is.character(assistant_id))
+  assertthat::assert_that(is_assistant_id(assistant_id))
+
   check_token()
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)

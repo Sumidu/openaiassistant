@@ -12,6 +12,10 @@
 #' }
 #' }
 assistant_run <- function(assistant, thread){
+
+  assertthat::assert_that(is_assistant(assistant))
+  assertthat::assert_that(is_thread(thread))
+
   check_token()
   body <- list(assistant_id = assistant$id)
   base_url <- "https://api.openai.com/"

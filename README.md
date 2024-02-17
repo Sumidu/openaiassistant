@@ -59,7 +59,7 @@ message <-
 # create a run with this question
 run <- assistant_run(assistant, thread)
 # wait for completion
-while (run$status %in% c("queued", "in_progress")) {
+while (is_active(run)) {
   run <- run_retrieve(run, thread)
   Sys.sleep(5)
 }
@@ -70,7 +70,7 @@ messages <- thread_retrieve_messages(thread)
 # print the result
 print(get_last_message(messages))
 
-#> [1] Lübeck
+#> [1] "Lübeck"
 
 # delete everything
 res_thread <- thread_delete(thread$id)
