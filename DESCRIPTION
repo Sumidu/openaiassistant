@@ -1,6 +1,6 @@
 Package: openaiassistant
 Title: An R Wrapper for the OpenAI assistants API
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: 
     person("André", "Calero Valdez", "" , "andrecalerovaldez@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-6214-1461"))
