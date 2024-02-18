@@ -1,7 +1,7 @@
 test_that("Deleting an assistant works (mock)", {
 
   fcal <- function(){
-    assistant_id <- "asst_wG0qN11YdULaC1f0Vvm5UQx7"
+    assistant_id <- "asst_abc"
     assistant_delete(assistant_id)
   }
 
