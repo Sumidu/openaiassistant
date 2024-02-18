@@ -4,7 +4,7 @@ Version: 0.2.1
 Authors@R: 
     person("André", "Calero Valdez", "" , "andrecalerovaldez@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-6214-1461"))
-Description: What the package does (one paragraph).
+Description: This package provides access to the OpenAI assistants API. It allows you to create and use assistants programmatically.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
