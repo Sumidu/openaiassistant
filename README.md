@@ -9,6 +9,8 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![pkgdown](https://github.com/Sumidu/openaiassistant/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/Sumidu/openaiassistant/actions/workflows/pkgdown.yaml)
 [![R-CMD-check](https://github.com/Sumidu/openaiassistant/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Sumidu/openaiassistant/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/Sumidu/openaiassistant/branch/main/graph/badge.svg)](https://app.codecov.io/gh/Sumidu/openaiassistant?branch=main)
 <!-- badges: end -->
 
 The goal of openaiassistant is to provide access to the assistants API
