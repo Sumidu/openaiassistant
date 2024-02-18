@@ -1,0 +1,18 @@
+{
+    "id": "asst_wG0qN11YdULaC1f0Vvm5UQx7",
+    "object": "assistant",
+    "created_at": 1708252286,
+    "name": "TEST",
+    "description": null,
+    "model": "gpt-4-turbo-preview",
+    "instructions": "Do nothing",
+    "tools": [
+
+    ],
+    "file_ids": [
+
+    ],
+    "metadata": {
+
+    }
+}

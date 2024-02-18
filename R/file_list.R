@@ -1,7 +1,7 @@
 #' List all files
 #' @returns A list of file objects
 #' @export
-files_list <- function(){
+file_list <- function(){
 
   check_token()
 

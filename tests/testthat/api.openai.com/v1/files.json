@@ -1,0 +1,46 @@
+{
+    "object": "list",
+    "data": [
+        {
+            "object": "file",
+            "id": "file-WkPGrG3Qq2KHgLHZe1xMwTTY",
+            "purpose": "assistants",
+            "filename": "afile.txt",
+            "bytes": 6027,
+            "created_at": 1708125949,
+            "status": "processed",
+            "status_details": null
+        },
+        {
+            "object": "file",
+            "id": "file-yzeuPPh8Ts3LtT0TeHsZ5d7x",
+            "purpose": "assistants",
+            "filename": "firstfile.txt",
+            "bytes": 31422,
+            "created_at": 1708125946,
+            "status": "processed",
+            "status_details": null
+        },
+        {
+            "object": "file",
+            "id": "file-lxFSVWiKv75SY9C8yPmpcfQd",
+            "purpose": "assistants",
+            "filename": "secondfile.txt",
+            "bytes": 25808,
+            "created_at": 1708125944,
+            "status": "processed",
+            "status_details": null
+        },
+        {
+            "object": "file",
+            "id": "file-TpNrxt2cyjoJeN2cCF26uYWZ",
+            "purpose": "assistants",
+            "filename": "thirdfile.txt",
+            "bytes": 23102,
+            "created_at": 1708125941,
+            "status": "processed",
+            "status_details": null
+        }
+    ],
+    "has_more": false
+}
