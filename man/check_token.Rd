@@ -6,9 +6,14 @@
 \usage{
 check_token()
 }
+\value{
+TRUE is the token is set, errors otherwise
+}
 \description{
 Check whether the OpenAI Token is set
 }
 \examples{
+\dontrun{
 check_token()
+}
 }
