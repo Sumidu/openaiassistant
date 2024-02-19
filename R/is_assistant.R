@@ -30,7 +30,7 @@ is_assistant_id <- function(assistant_id){
   if(is.null(assistant_id)){
     return(FALSE)
   }
-  if(substr(assistant_id, 1,5) != "asst_"){
+  if(substr(assistant_id, 1,4) != "asst"){
     return(FALSE)
   }
   return(TRUE)

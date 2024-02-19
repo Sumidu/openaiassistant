@@ -9,7 +9,7 @@ is_file_id <- function(file_id){
   if(is.null(file_id)){
     return(FALSE)
   }
-  if(substr(file_id, 1,5) != "file_"){
+  if(substr(file_id, 1,4) != "file"){
     return(FALSE)
   }
   return(TRUE)

@@ -28,7 +28,7 @@ testthat::test_that("manual test", {
   file <- file_upload(here::here("tests", "testthat", "test_resources", "demofile.txt"))
 
   # add file to assistant
-  assistant <- assistant_add_file(assistant, file$id)
+  assistant <- assistant_file_create(assistant, file$id)
 
 
 
@@ -48,6 +48,8 @@ testthat::test_that("manual test", {
     }
     beepr::beep(4)
   }
+  # emergency retrieve
+  # thread <- thread_retrieve("thread_9Sd4pM34p6a3YzwgPulfxe5t")
   msgs <- thread_retrieve_messages(thread)
 
   reply <- get_last_message(msgs)
@@ -60,7 +62,7 @@ testthat::test_that("manual test", {
   testthat::expect_error(  thread_retrieve(thread$id) )
 
 
-  files <- files_list()
+  files <- file_list()
   if(!file$id %in% files$data$id){
     # file exists
     testthat::fail("File was not listed")
@@ -70,7 +72,7 @@ testthat::test_that("manual test", {
   res <- file_delete(file$id)
   testthat::expect_equal(res$deleted, TRUE)
 
-  files <- files_list()
+  files <- file_list()
   if(file$id %in% files$data$id){
     # file exists
     testthat::fail("File was not deleted")
