@@ -19,7 +19,7 @@ thread_add_message <- function(thread, message){
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)
   resp <- req |>
-    httr2::req_url_path_append("v2/threads") |>
+    httr2::req_url_path_append("v1/threads") |>
     httr2::req_url_path_append(thread$id) |>
     httr2::req_url_path_append("messages") |>
     httr2::req_auth_bearer_token(token = Sys.getenv("OPENAI_API_KEY")) |>
