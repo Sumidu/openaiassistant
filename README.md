@@ -21,7 +21,8 @@ of OpenAI. The package is low effort and not yet fully tested.
 You can install the development version of openaiassistant like so:
 
 ``` r
-remotes::install_github("sumidu/openaiassistant")
+# Original by github.com/sumidu
+remotes::install_github("samueltobler/openaiassistant")
 ```
 
 ## Example Usage
