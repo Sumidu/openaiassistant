@@ -12,7 +12,7 @@ thread_retrieve <- function(thread_id){
   base_url <- "https://api.openai.com/"
   req <- httr2::request(base_url)
   resp <- req |>
-    httr2::req_url_path_append("v2/threads") |>
+    httr2::req_url_path_append("v1/threads") |>
     httr2::req_url_path_append(thread_id) |>
     httr2::req_auth_bearer_token(token = Sys.getenv("OPENAI_API_KEY")) |>
     httr2::req_headers("Content-Type" = "application/json") |>
